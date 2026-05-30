@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Trans Solutions</title>
+
+  <script type="module" src="app.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      color: white;
+      display: flex;
+      min-height: 100vh;
+
+      background: url("assets/background/bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      z-index: -1;
+    }
+
+    /* SIDEBAR */
+    aside {
+      width: 250px;
+      background: rgba(18, 20, 27, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 24px;
+      border-right: 1px solid #1f2230;
+    }
+
+    aside h2 {
+      font-size: 18px;
+      margin-bottom: 24px;
+      color: yellow;
+    }
+
+    aside a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #cfcfcf;
+      padding: 10px 12px;
+      text-decoration: none;
+      border-radius: 10px;
+
+      transition: 0.2s ease;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    aside a:hover {
+      background: #1f2230;
+      transform: translateX(4px);
+      color: white;
+    }
+
+    aside a.active {
+      background: linear-gradient(90deg, orange, yellow);
+      color: #0b0c10;
+      font-weight: 600;
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    /* CARD */
+    .car-card {
+      background: #12141b;
+      border: 1px solid #1f2230;
+      border-radius: 14px;
+      padding: 12px;
+      transition: 0.2s ease;
+    }
+
+    .car-card:hover {
+      transform: translateY(-6px);
+      border-color: #00d4ff33;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: contain;
+      background: radial-gradient(circle, #1a1d2a, #0b0c10);
+      border-radius: 10px;
+      padding: 8px;
+    }
+
+    .car-card h3 {
+      font-size: 16px;
+      margin: 10px 0 4px;
+    }
+
+    .car-card p {
+      margin: 0;
+      color: #00d4ff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <aside>
+    <h2>Menü</h2>
+    <a href="#home">🏠 Kezdőlap</a>
+    <a href="#cars">🚗 Bérautók</a>
+    <a href="#terms">📄 Feltételek</a>
+    <a href="#contact">📞 Kapcsolat</a>
+  </aside>
+
+  <main id="app"></main>
+</body>
+</html>
